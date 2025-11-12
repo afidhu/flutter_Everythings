@@ -11,6 +11,7 @@ import 'Leassons/dependencies.dart';
 import 'Leassons/forms_validate.dart';
 import 'Leassons/getBuilder.dart';
 import 'Leassons/imagepicker.dart';
+import 'Leassons/slider_caurol.dart';
 import 'Leassons/videoplayer.dart';
 import 'Leassons/workers.dart';
 
@@ -38,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         margin: EdgeInsets.all(20),
         child: Center(
-          child: Column(
+          child: ListView(
             children: [
               MaterialButton(
                 textColor: Colors.white,
@@ -130,8 +131,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(TutorialLists());
                 },
                 child: Text('Tutorial Lists'),
-              )
+              ),
 
+              SizedBox(height: 20,),
+              MaterialButton(
+                color: Colors.limeAccent,
+                onPressed: (){
+                  Get.to(SliderCarousel());
+                },
+                child: Text('Slider Carousel'),
+              )
             ],
           ),
         ),
