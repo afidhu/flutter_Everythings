@@ -1,8 +1,9 @@
-import 'package:delivery_track_system/tutorials/controller/getx_service.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'controller/counterController.dart';
+import 'controller/getx_service.dart';
 
 class Tu1 extends StatefulWidget {
   const Tu1({super.key});

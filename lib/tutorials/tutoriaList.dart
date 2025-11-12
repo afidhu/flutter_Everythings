@@ -1,7 +1,8 @@
-import 'package:delivery_track_system/tutorials/tu1.dart';
-import 'package:delivery_track_system/tutorials/tu2.dart';
-import 'package:delivery_track_system/tutorials/tu3.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_everythings/tutorials/tu1.dart';
+import 'package:flutter_everythings/tutorials/tu2.dart';
+import 'package:flutter_everythings/tutorials/tu3.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 

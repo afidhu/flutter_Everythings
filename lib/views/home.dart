@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '../tutorials/tutoriaList.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
 import 'Leassons/forms_validate.dart';
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 child: Text('Router'),
               ),
-
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.green,
                   onPressed: (){
@@ -66,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 child: Text('GetStorage'),
               ),
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.blueAccent,
                 onPressed: (){
@@ -73,6 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('GetBuilder'),
               ),
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.green,
                 onPressed: (){
@@ -80,6 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('workers'),
               ),
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.cyan,
                 onPressed: (){
@@ -87,6 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('Dependencies'),
               ),
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.cyan,
                 onPressed: (){
@@ -94,6 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('image Picker'),
               ),
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.deepOrangeAccent,
                 onPressed: (){
@@ -101,6 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('video player'),
               ),
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.pinkAccent,
                 onPressed: (){
@@ -108,12 +115,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('Form Validation'),
               ),
+              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.indigoAccent,
                 onPressed: (){
                   Get.to(AutoRedirect());
                 },
                 child: Text('Auto Redirect'),
+              ),
+              SizedBox(height: 20,),
+              MaterialButton(
+                color: Colors.blue,
+                onPressed: (){
+                  Get.to(TutorialLists());
+                },
+                child: Text('Tutorial Lists'),
               )
 
             ],
