@@ -17,10 +17,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialBinding:AllBindindgs(), //This is bindings means all controller group and once and i can access any in my UIs ,
       title: 'Flutter Demo',
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      themeMode: ThemeMode.system,
+      theme: ThemeData.dark(useMaterial3: false).copyWith(),
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      // ),
+      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(),
       home: HomeScreen(),
     );
   }

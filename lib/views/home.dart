@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
               MaterialButton(
                 color: Colors.cyan,
                 onPressed: (){
-                  Get.to(ImagePicker());
+                  Get.to(ImagePickerFromSource());
                 },
                 child: Text('image Picker'),
               ),
@@ -135,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               SizedBox(height: 20,),
               MaterialButton(
-                color: Colors.limeAccent,
+                color: Colors.grey,
                 onPressed: (){
                   Get.to(SliderCarousel());
                 },

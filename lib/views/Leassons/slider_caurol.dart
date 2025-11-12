@@ -140,6 +140,41 @@ class _SliderCarouselState extends State<SliderCarousel> {
                   dotColor:  Colors.white,
                   activeDotColor:  Colors.indigo
               ),
+            ),
+
+
+            //////////////THIS IS CAROUSEL BULIDER
+            SizedBox(height: 20,),
+            Text('CarouselSlider builder', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            CarouselSlider.builder(
+                itemCount: mySliderList.length,
+                itemBuilder: (BuildContext, int itemIndex, int pageViewIndex){
+                  print('xx: $pageViewIndex');
+                  return Card(
+                    child: Image.asset('images/img${itemIndex+1}.jpg'),
+                  );
+
+                },
+                options: CarouselOptions(
+                  height: 400,
+                  aspectRatio: 16/9,
+                  viewportFraction: 0.8,
+                  initialPage: 0,
+                  enableInfiniteScroll: true,
+                  reverse: false,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 2),
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enlargeCenterPage: true,
+                  enlargeFactor: 0.3,
+                  scrollDirection: Axis.vertical,
+                  onPageChanged: (index, reason) {
+                    setState(() {
+                      myCurrentIndex = index;
+                    });
+                  },
+                )
             )
           ],
         ),
