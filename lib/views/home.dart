@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get_storage/get_storage.dart';
 
+import '../charts_graphs/charts_list.dart';
 import '../tutorials/tutoriaList.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
@@ -140,7 +141,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(SliderCarousel());
                 },
                 child: Text('Slider Carousel'),
-              )
+              ),SizedBox(height: 20,),
+              MaterialButton(
+                color: Colors.blueGrey,
+                onPressed: (){
+                  Get.to(ChartsLists());
+                },
+                child: Text('Charts And Graphs'),
+              ),
             ],
           ),
         ),
