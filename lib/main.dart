@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_everythings/views/home.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'bindings/allBindings.dart';
+import 'check_connection/internent_controller.dart';
 
 void main() {
+
+  Get.put(ConnectivityController());
   runApp(const MyApp());
 }
 
