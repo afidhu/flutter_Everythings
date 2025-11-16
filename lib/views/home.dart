@@ -6,6 +6,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../bottombars/my_bottombar.dart';
 import '../charts_graphs/charts_list.dart';
 import '../tutorials/tutoriaList.dart';
 import 'Leassons/auto_redirect.dart';
@@ -164,6 +165,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(ChartsLists());
                 },
                 child: Text('Charts And Graphs'),
+              ),MaterialButton(
+                color: Colors.blueGrey,
+                onPressed: (){
+                  Get.to(MyBottomBar());
+                },
+                child: Text('bottomBar'),
               ),
             ],
           ),

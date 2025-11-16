@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 
 import 'bindings/allBindings.dart';
+import 'bottombars/login.dart';
 import 'check_connection/internent_controller.dart';
 
 void main() {
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.dark,
 
       home: HomeScreen(),
+      // home: Login(),
     );
   }
 }
