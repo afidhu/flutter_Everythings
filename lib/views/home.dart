@@ -29,6 +29,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  var _isThemed = false.obs;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +37,17 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.orange,
         title: Text('Flutter EveryThings'),
          centerTitle: true,
+        actions: [
+         Obx(()=> Switch(
+             value: _isThemed.value,
+             onChanged: (val){
+               _isThemed.value =val;
+
+               _isThemed.value? Get.changeThemeMode(ThemeMode.light): Get.changeThemeMode(ThemeMode.dark);
+               // Get.changeThemeMode(ThemeMode.light);
+             }
+         ))
+        ],
       ),
       body: Container(
         margin: EdgeInsets.all(20),
@@ -153,6 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+
     );
   }
 }

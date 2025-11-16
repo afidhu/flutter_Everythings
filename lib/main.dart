@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_everythings/theme/color_themes.dart';
 import 'package:flutter_everythings/views/home.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+
 
 import 'bindings/allBindings.dart';
 import 'check_connection/internent_controller.dart';
@@ -23,11 +23,14 @@ class MyApp extends StatelessWidget {
       initialBinding:AllBindindgs(), //This is bindings means all controller group and once and i can access any in my UIs ,
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
-      theme: ThemeData.dark(useMaterial3: false).copyWith(),
+      // theme: ThemeData.dark(useMaterial3: false).copyWith(),
       // theme: ThemeData(
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       // ),
-      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(),
+      // darkTheme: ThemeData.dark(useMaterial3: true).copyWith(),
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+
       home: HomeScreen(),
     );
   }
