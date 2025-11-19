@@ -1,7 +1,7 @@
 echo "# flutter_Everythings" >> README.md
 git init
 git add .
-git commit -m "add BottomBar"
+git commit -m "add MAPS"
 git branch -M main
 git remote add origin https://github.com/afidhu/flutter_Everythings.git
 git push -u origin main
