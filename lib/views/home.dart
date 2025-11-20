@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../bottombars/my_bottombar.dart';
 import '../charts_graphs/charts_list.dart';
+import '../cupertino_wedget/cupertino_list.dart';
 import '../maps/map_screen.dart';
 import '../tutorials/tutoriaList.dart';
 import 'Leassons/auto_redirect.dart';
@@ -181,6 +182,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(MapScreen());
                 },
                 child: Text('Map'),
+              ),
+              MaterialButton(
+                color: Colors.amberAccent,
+                onPressed: (){
+                  Get.to(cupertinoWedget());
+                },
+                child: Text('cupertino Widget'),
               ),
             ],
           ),
