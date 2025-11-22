@@ -10,6 +10,7 @@ import '../bottombars/my_bottombar.dart';
 import '../charts_graphs/charts_list.dart';
 import '../cupertino_wedget/cupertino_list.dart';
 import '../maps/map_screen.dart';
+import '../quill_editor/quil_text_editing.dart';
 import '../tutorials/tutoriaList.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
@@ -189,6 +190,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(cupertinoWedget());
                 },
                 child: Text('cupertino Widget'),
+              ),MaterialButton(
+                color: Colors.greenAccent,
+                onPressed: (){
+                  Get.to(()=>QuilTextEditing());
+                },
+                child: Text('QuilTextEditing'),
               ),
             ],
           ),
