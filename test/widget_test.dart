@@ -6,25 +6,76 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_everythings/views/home.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutter_everythings/main.dart';
+import 'package:get/get.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  // testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  //   // Build our app and trigger a frame.
+  //   await tester.pumpWidget(const MyApp());
+  //
+  //   // Verify that our counter starts at 0.
+  //   expect(find.text('0'), findsOneWidget);
+  //   expect(find.text('1'), findsNothing);
+  //
+  //   // Tap the '+' icon and trigger a frame.
+  //   await tester.tap(find.byIcon(Icons.add));
+  //   await tester.pump();
+  //
+  //   // Verify that our counter has incremented.
+  //   expect(find.text('0'), findsNothing);
+  //   expect(find.text('1'), findsOneWidget);
+  // });
+  group("home screen", () {
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    //Those are test widget
+      testWidgets('Screen basics behavior', (tester) async {
+        await tester.pumpWidget(
+          GetMaterialApp(home: const HomeScreen()),
+        );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+        //NOT (expect) For iteration widget inside
+        expect(find.byType(ListView), findsOneWidget);
+        //
+        // final button = find.byType(MaterialButton).first;
+        // await tester.ensureVisible(button);
+        // await tester.tap(button);
+        // await tester.pumpAndSettle();
+      });
+        //Test Text
+        // final text =find.byType(Text).first;
+        // await tester.ensureVisible(text);
+        // expect(text, findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+      testWidgets('Texts(word) behavior', (tester) async {
+        await tester.pumpWidget(
+          GetMaterialApp(home: const HomeScreen()),
+        );
+        // final textMessage = find.text('workers');
+        // await tester.ensureVisible(textMessage);
+        // await tester.pumpAndSettle();
+        // expect(textMessage, findsOneWidget);
+
+      });
+        testWidgets('SizeBox basics behavior', (tester) async {
+          await tester.pumpWidget(
+            GetMaterialApp(home: const HomeScreen()),
+          );
+
+          final sizebox = find.byType(SizedBox).first;
+        await tester.ensureVisible(sizebox);
+        await tester.pumpAndSettle();
+        expect(sizebox, findsOneWidget);
+
+      });
+
+
+
+
+    });
+
+
 }

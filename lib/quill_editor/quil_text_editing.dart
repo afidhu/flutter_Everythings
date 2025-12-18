@@ -170,15 +170,11 @@ class _QuilTextEditingState extends State<QuilTextEditing> {
 
             OutlinedButton(
               onPressed: () {
-                _controller.clipboardPaste(updateEditor: () => _controller);
                 print('toPlainText: ${_controller.document.toPlainText()}');
-                // print('toDelta: ${_controller.document.toDelta()}');
-                // print('documentChangeObserver: ${_controller.document.documentChangeObserver}');
-                // print('history: ${_controller.document.history}');
-                // print('document: ${_controller.document}');
+                final json = _controller.document.toDelta().toJson();
+                print("Saved JSON: $json");
               },
               child: const Text('Save'),
-
             ),
           ],
         ),
