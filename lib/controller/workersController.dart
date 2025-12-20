@@ -9,8 +9,12 @@ class MyIncrementControllerWorker extends GetxController{
   var count =0.obs;
   
   void increments(){
-    count++;
+    count.value++;
   }
+  void decrements(){
+    count.value--;
+  }
+
 
 
 
