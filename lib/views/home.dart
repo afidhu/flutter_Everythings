@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../bottombars/my_bottombar.dart';
 import '../charts_graphs/charts_list.dart';
 import '../cupertino_wedget/cupertino_list.dart';
+import '../data_api/widgets/home_data.dart';
 import '../maps/map_screen.dart';
 import '../quill_editor/quil_text_editing.dart';
 import '../tutorials/tutoriaList.dart';
@@ -58,8 +59,10 @@ class _HomeScreenState extends State<HomeScreen> {
         margin: EdgeInsets.all(20),
         child: Center(
           child: ListView(
+
             children: [
               MaterialButton(
+                key: Key('GetxRouter1'),
                 textColor: Colors.white,
                   color: Colors.deepOrange,
                   onPressed: () async {
@@ -190,12 +193,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(cupertinoWedget());
                 },
                 child: Text('cupertino Widget'),
-              ),MaterialButton(
+              ),
+
+              MaterialButton(
                 color: Colors.greenAccent,
                 onPressed: (){
                   Get.to(()=>QuilTextEditing());
                 },
                 child: Text('QuilTextEditing'),
+              ),      MaterialButton(
+                color: Colors.blueGrey,
+                onPressed: (){
+                  Get.to(()=>HomeData());
+                },
+                child: Text('Data Api'),
               ),
             ],
           ),
