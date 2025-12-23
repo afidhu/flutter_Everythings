@@ -19,6 +19,7 @@ void main(){
     final texFinder1 =  find.text('Router');
     expect(texFinder1, findsOneWidget);  //This means when finds is found in single widget only
 
+
     final texFinder3 = find.text('worker');
     expect(texFinder3, findsNothing);  //This means when finds doesn't  found in any widget
 
@@ -26,11 +27,13 @@ void main(){
     // expect(texFinder4, findsNWidgets(2));  //This means when finds is found in many widget like 2etc
 
 
+
     // final btn = find.byType(MaterialButton).first;
     final btn = find.byKey(Key('GetxRouter1'));
 await    tester.tap(btn);
   await tester.pumpAndSettle(); //rebuild and This mean when click navigate to
   expect(find.byType(GetxRouter1), findsOneWidget);
+
 
 
 
