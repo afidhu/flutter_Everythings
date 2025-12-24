@@ -1,7 +1,7 @@
 class PostModel {
   int? id;
   String? title;
-  num? price;
+  double? price;
   String? description;
   String? category;
   String? image;

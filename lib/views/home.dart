@@ -206,7 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: (){
                   Get.to(()=>HomeData());
                 },
-                child: Text('Data Api'),
+                child: Text('Data Api & Hive'),
               ),
             ],
           ),

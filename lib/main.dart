@@ -4,12 +4,18 @@ import 'package:flutter_everythings/views/home.dart';
 import 'package:get/get.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'bindings/allBindings.dart';
 import 'bottombars/login.dart';
 import 'check_connection/internent_controller.dart';
+import 'package:hive/hive.dart';
+Future<void> main()  async{
 
-void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter("postHive");
+  // await Hive.openBox<List>('postBox'); //Create a box,(can create at main.dart is fine) THIS STORE LIST OR ANY YOU SPECIED
+  await Hive.openBox('postBox'); //Create a box,(can create at main.dart is fine) THIS BOX STORE ANY DATA
 
   Get.put(ConnectivityController());
   runApp(const MyApp());
