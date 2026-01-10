@@ -13,6 +13,7 @@ import '../data_api/widgets/home_data.dart';
 import '../maps/map_screen.dart';
 import '../quill_editor/quil_text_editing.dart';
 import '../tutorials/tutoriaList.dart';
+import '../ui_design/dribble_ui/home_dribble.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
 import 'Leassons/forms_validate.dart';
@@ -58,8 +59,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         margin: EdgeInsets.all(20),
         child: Center(
-          child: ListView(
-
+          child: GridView(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            physics:  BouncingScrollPhysics(),
+            scrollDirection: Axis.vertical,
             children: [
               MaterialButton(
                 key: Key('GetxRouter1'),
@@ -84,7 +87,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   textStyle: TextStyle()
                 ),),
               ),
-              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.green,
                   onPressed: (){
@@ -92,7 +94,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 child: Text('GetStorage'),
               ),
-              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.blueAccent,
                 onPressed: (){
@@ -100,7 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('GetBuilder'),
               ),
-              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.green,
                 onPressed: (){
@@ -108,7 +108,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('workers'),
               ),
-              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.cyan,
                 onPressed: (){
@@ -116,7 +115,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('Dependencies'),
               ),
-              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.cyan,
                 onPressed: (){
@@ -124,7 +122,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('image Picker'),
               ),
-              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.deepOrangeAccent,
                 onPressed: (){
@@ -132,7 +129,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('video player'),
               ),
-              SizedBox(height: 20,),
               MaterialButton(
                 color: Colors.pinkAccent,
                 onPressed: (){
@@ -140,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('Form Validation'),
               ),
-              SizedBox(height: 20,),
+
               MaterialButton(
                 color: Colors.indigoAccent,
                 onPressed: (){
@@ -148,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('Auto Redirect'),
               ),
-              SizedBox(height: 20,),
+
               MaterialButton(
                 color: Colors.blue,
                 onPressed: (){
@@ -157,14 +153,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Text('Tutorial Lists'),
               ),
 
-              SizedBox(height: 20,),
+
               MaterialButton(
                 color: Colors.grey,
                 onPressed: (){
                   Get.to(SliderCarousel());
                 },
                 child: Text('Slider Carousel'),
-              ),SizedBox(height: 20,),
+              ),
+
               MaterialButton(
                 color: Colors.blueGrey,
                 onPressed: (){
@@ -201,12 +198,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(()=>QuilTextEditing());
                 },
                 child: Text('QuilTextEditing'),
-              ),      MaterialButton(
+              ),
+
+              MaterialButton(
                 color: Colors.blueGrey,
                 onPressed: (){
                   Get.to(()=>HomeData());
                 },
                 child: Text('Data Api & Hive'),
+              ),
+
+              MaterialButton(
+                color: Colors.amberAccent,
+                onPressed: (){
+                  Get.to(()=>HomeDribble());
+                },
+                child: Text('Dribble Ui'),
               ),
             ],
           ),
