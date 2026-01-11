@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import 'emmoton_face.dart';
+import 'exercise_list.dart';
 
 class HomeDribble extends StatefulWidget {
   const HomeDribble({super.key});
@@ -70,7 +71,7 @@ class _HomeDribbleState extends State<HomeDribble> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('How do you feel', style: TextStyle(color: Colors.white,fontSize: 18, fontWeight: FontWeight.bold),),
+                        Text('How do you feel ?', style: TextStyle(color: Colors.white,fontSize: 18, fontWeight: FontWeight.bold),),
                         Icon(Icons.more_horiz)
                       ],
                     ),
@@ -112,7 +113,57 @@ class _HomeDribbleState extends State<HomeDribble> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20)),
-                    color: Colors.white
+                  gradient: LinearGradient(colors: [
+                     Colors.white,
+                     Colors.red,
+                     Colors.white10
+                  ])
+                ),
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    spacing: 9,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(top: 8),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          spacing: 5,
+                          children: [
+                            Text("Exercise", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),),
+                            Icon(Icons.more_horiz, color: Colors.black, fontWeight: FontWeight.bold,)
+                          ],
+                        ),
+                      ),
+                     Expanded(
+                       child: ListView(
+                         children: [
+                           ExerciseList(
+                             icon: Icons.favorite,
+                             messages: "Special skill",
+                             number: 20,
+                           ),
+                           ExerciseList(
+                             icon: Icons.book_online_outlined,
+                             messages: "write skill",
+                             number: 220,
+                           ),
+                           ExerciseList(
+                             icon: Icons.person_2_outlined,
+                             messages: "Reading skill",
+                             number: 440,
+                           ),
+                           ExerciseList(
+                             icon: Icons.running_with_errors_sharp,
+                             messages: "running skill",
+                             number: 20,
+                           ),
+                         ],
+                       ),
+                     )
+                    ],
+                  ),
                 ),
               ),
             )
