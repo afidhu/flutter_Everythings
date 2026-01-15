@@ -14,6 +14,8 @@ import '../maps/map_screen.dart';
 import '../quill_editor/quil_text_editing.dart';
 import '../tutorials/tutoriaList.dart';
 import '../ui_design/dribble_ui/home_dribble.dart';
+import '../ui_design/responsive_uis/responsive_layout.dart';
+import '../ui_design/responsive_uis/responsive_ui.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
 import 'Leassons/forms_validate.dart';
@@ -214,6 +216,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(()=>HomeDribble());
                 },
                 child: Text('Dribble Ui'),
+              ),
+
+              MaterialButton(
+                color: Colors.blue,
+                onPressed: (){
+                  Get.to(()=>ResponsiveUi());
+                },
+                child: Text('Responsive Ui'),
+              ),
+
+              MaterialButton(
+                color: Colors.greenAccent,
+                onPressed: (){
+                  Get.to(()=>ResponsiveLayout());
+                },
+                child: Text('Responsive Layout'),
               ),
             ],
           ),

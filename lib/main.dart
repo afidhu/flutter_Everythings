@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'bindings/allBindings.dart';
 import 'bottombars/login.dart';
 import 'check_connection/internent_controller.dart';
@@ -27,28 +27,33 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-        localizationsDelegates: const [
-          GlobalMaterialLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          FlutterQuillLocalizations.delegate,
-        ],
-      initialBinding:AllBindindgs(), //This is bindings means all controller group and once and i can access any in my UIs ,
-      title: 'Flutter Demo',
-      themeMode: ThemeMode.system,
-      // theme: ThemeData.dark(useMaterial3: false).copyWith(),
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      // ),
+    return ScreenUtilInit(
+      designSize: const Size(249, 419),
+      // minTextAdapt: true,
+      // splitScreenMode: true,
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            FlutterQuillLocalizations.delegate,
+          ],
+        initialBinding:AllBindindgs(), //This is bindings means all controller group and once and i can access any in my UIs ,
+        title: 'Flutter Demo',
+        themeMode: ThemeMode.system,
+        // theme: ThemeData.dark(useMaterial3: false).copyWith(),
+        // theme: ThemeData(
+        //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // ),
+        
+        // darkTheme: ThemeData.dark(useMaterial3: true).copyWith(),
+        theme: AppTheme.light,
+        darkTheme: AppTheme.dark,
       
-      // darkTheme: ThemeData.dark(useMaterial3: true).copyWith(),
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
-
-      home: HomeScreen(),
-      // home: Login(),
+        home: HomeScreen(),
+        // home: Login(),
+      ),
     );
   }
 }
