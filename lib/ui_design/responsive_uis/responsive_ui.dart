@@ -22,7 +22,7 @@ class ResponsiveUi extends StatelessWidget {
               height: 269.h,
               child: Column(
                 children: [
-                  Text("Responsive Ui", style: TextStyle(fontSize: 10.sp),),
+                  Text("Responsive Ui by use Flutter_screenUtil", style: TextStyle(fontSize: 10.sp),),
                   Form(child: Column(
                     spacing: 10,
                     children: [
