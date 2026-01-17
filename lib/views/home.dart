@@ -16,6 +16,7 @@ import '../tutorials/tutoriaList.dart';
 import '../ui_design/dribble_ui/home_dribble.dart';
 import '../ui_design/responsive_uis/responsive_layout.dart';
 import '../ui_design/responsive_uis/responsive_ui.dart';
+import '../ui_design/youtube_ui/screen/butom_nav.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
 import 'Leassons/forms_validate.dart';
@@ -232,6 +233,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(()=>ResponsiveLayout());
                 },
                 child: Text('Responsive Layout'),
+              ),
+
+              MaterialButton(
+                color: Colors.indigo[100],
+                onPressed: (){
+                  Get.to(()=>BottomNav());
+                },
+                child: Text('Youtube Ui'),
               ),
             ],
           ),
