@@ -19,22 +19,7 @@ class VideoCard extends StatelessWidget {
           GestureDetector(
             onTap: (){
 
-                 Get.bottomSheet(Stack(
-                   fit: StackFit.loose,
-                   children: [
-                       Miniplayer(
-                         minHeight: 60.h,
-                         maxHeight: 800.h,
-                         tapToCollapse: true,
-                         builder: (height, percentage) {
-                           return Image.network(videos.thumbnail, height:50.h ,width: 100,fit: BoxFit.contain,);
-
-                         },
-                       ),
-                     IconButton(onPressed: (){Get.back();}, icon: Icon(Icons.close, color: Colors.red,size: 20.sp,fontWeight: FontWeight.bold,))
-                   ],
-
-                 ));
+                 Get.bottomSheet(isScrollControlled: true , MinPlayWidget(videos: videos));
             },
             child: Stack(
               children: [
@@ -68,5 +53,41 @@ class VideoCard extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class MinPlayWidget extends StatelessWidget {
+  const MinPlayWidget({
+    super.key,
+    required this.videos,
+  });
+
+  final dynamic videos;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+     // fit: StackFit.loose,
+     // alignment: Alignment.center,
+
+     children: [
+         Miniplayer(
+           curve: Curves.bounceOut,
+           minHeight: MediaQuery.of(context).size.height,
+           maxHeight: MediaQuery.of(context).size.height,
+           tapToCollapse: true,
+           builder: (height, percentage) {
+             return Image.network(videos.thumbnail, height:50.h ,width: 100,fit: BoxFit.contain,);
+
+           },
+         ),
+       Positioned(
+           top: 30,
+           right: 10,
+
+           child: IconButton(onPressed: (){Get.back();}, icon: Icon(Icons.keyboard_arrow_down, color: Colors.red,size: 20.sp,fontWeight: FontWeight.bold,)))
+     ],
+
+                     );
   }
 }

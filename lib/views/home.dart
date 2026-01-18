@@ -14,6 +14,7 @@ import '../maps/map_screen.dart';
 import '../quill_editor/quil_text_editing.dart';
 import '../tutorials/tutoriaList.dart';
 import '../ui_design/dribble_ui/home_dribble.dart';
+import '../ui_design/facebook_ui/screens/fb_home_screen.dart';
 import '../ui_design/responsive_uis/responsive_layout.dart';
 import '../ui_design/responsive_uis/responsive_ui.dart';
 import '../ui_design/youtube_ui/screen/butom_nav.dart';
@@ -241,6 +242,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(()=>BottomNav());
                 },
                 child: Text('Youtube Ui'),
+              ),
+
+              MaterialButton(
+                color: Colors.cyan[200],
+                onPressed: (){
+                  Get.to(()=>FbHomeScreen());
+                },
+                child: Text('Facebook Ui'),
               ),
             ],
           ),

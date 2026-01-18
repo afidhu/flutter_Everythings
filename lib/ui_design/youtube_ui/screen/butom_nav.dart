@@ -23,7 +23,7 @@ class _BottomNavState extends State<BottomNav> {
       body: pagesList[current_index],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.red,
+        selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
         currentIndex: current_index,
       onTap: (val){
