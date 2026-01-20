@@ -9,34 +9,36 @@ class OnlineRooms extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 100,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        physics: BouncingScrollPhysics(),
-        itemCount: 1+onlineUser.length,
-          itemBuilder: (context, index){
-            if(index == 0){
-            return Padding(
-                padding:EdgeInsets.fromLTRB(11, 2, 1, 2),
-                    child: _CreateRoomButton(),
-            );
-            }
-            var data = onlineUser[index-1];
+    return Card(
+      child: SizedBox(
+        width: double.infinity,
+        height: 100,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          physics: BouncingScrollPhysics(),
+          itemCount: 1+onlineUser.length,
+            itemBuilder: (context, index){
+              if(index == 0){
+              return Padding(
+                  padding:EdgeInsets.fromLTRB(11, 2, 1, 2),
+                      child: _CreateRoomButton(),
+              );
+              }
+              var data = onlineUser[index-1];
 
-            return CircleAvatar(
-              backgroundImage: NetworkImage(data.imageUrl),
-              child: Stack(
-                children: [
-                  Positioned(
-                      bottom: 26,
-                      right: 0,
-                      child: Icon(Icons.circle,color: Colors.green,))
-                ],
-              ),
-            );
-          }
+              return CircleAvatar(
+                backgroundImage: NetworkImage(data.imageUrl),
+                child: Stack(
+                  children: [
+                    Positioned(
+                        bottom: 26,
+                        right: 0,
+                        child: Icon(Icons.circle,color: Colors.green,))
+                  ],
+                ),
+              );
+            }
+        ),
       ),
     );
   }

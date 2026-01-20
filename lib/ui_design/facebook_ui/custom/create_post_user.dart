@@ -33,16 +33,18 @@ class CreatePostUser extends StatelessWidget {
             Container(
               height: 20.h,
               color: Colors.white,
-              child: Row(
-                textBaseline: TextBaseline.alphabetic,
-                children: [
-                 TextButton.icon(onPressed: ()=>print("live"), label:Text('live'), icon: Icon(Icons.videocam, color: Colors.red,),),
-                VerticalDivider(width: 10,),
-                 TextButton.icon(onPressed: ()=>print("live"), label:Text('Photo'), icon: Icon(Icons.photo_library, color: Colors.green,),),
-                VerticalDivider(width: 10,),
-                 TextButton.icon(onPressed: ()=>print("room"), label:Text('Room'), icon: Icon(Icons.video_call, color: Colors.purpleAccent,),),
-                VerticalDivider(width: 10,),
-                ],
+                child: Card(
+                child: Row(
+                  textBaseline: TextBaseline.alphabetic,
+                  children: [
+                   TextButton.icon(onPressed: ()=>print("live"), label:Text('live'), icon: Icon(Icons.videocam, color: Colors.red,),),
+                  VerticalDivider(width: 10,),
+                   TextButton.icon(onPressed: ()=>print("live"), label:Text('Photo'), icon: Icon(Icons.photo_library, color: Colors.green,),),
+                  VerticalDivider(width: 10,),
+                   TextButton.icon(onPressed: ()=>print("room"), label:Text('Room'), icon: Icon(Icons.video_call, color: Colors.purpleAccent,),),
+                  VerticalDivider(width: 10,),
+                  ],
+                ),
               ),
             )
           ],
