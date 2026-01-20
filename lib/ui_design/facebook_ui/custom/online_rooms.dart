@@ -33,7 +33,6 @@ class OnlineRooms extends StatelessWidget {
                       bottom: 26,
                       right: 0,
                       child: Icon(Icons.circle,color: Colors.green,))
-
                 ],
               ),
             );
