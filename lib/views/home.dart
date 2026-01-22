@@ -18,6 +18,8 @@ import '../ui_design/facebook_ui/custom/bottom_nav_bar.dart';
 import '../ui_design/facebook_ui/screens/fb_home_screen.dart';
 import '../ui_design/responsive_uis/responsive_layout.dart';
 import '../ui_design/responsive_uis/responsive_ui.dart';
+import '../ui_design/slidedable/home_slidable.dart';
+import '../ui_design/tiktok_ui/tiktok_home_screen.dart';
 import '../ui_design/youtube_ui/screen/butom_nav.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
@@ -251,6 +253,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(()=>BottomNavBar());
                 },
                 child: Text('Facebook Ui'),
+              ),
+
+              MaterialButton(
+                color: Colors.teal,
+                onPressed: (){
+                  Get.to(()=>TiktokHomeScreen());
+                },
+                child: Text('Tiktok Ui'),
+              ),
+
+              MaterialButton(
+                color: Colors.pink,
+                onPressed: (){
+                  Get.to(()=>HomeSlidable());
+                },
+                child: Text('slid able'),
               ),
             ],
           ),
