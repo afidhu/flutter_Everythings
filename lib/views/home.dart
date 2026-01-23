@@ -21,6 +21,7 @@ import '../ui_design/responsive_uis/responsive_ui.dart';
 import '../ui_design/slidedable/home_slidable.dart';
 import '../ui_design/tiktok_ui/tiktok_home_screen.dart';
 import '../ui_design/youtube_ui/screen/butom_nav.dart';
+import '../videos_player/videos_players.dart';
 import 'Leassons/auto_redirect.dart';
 import 'Leassons/dependencies.dart';
 import 'Leassons/forms_validate.dart';
@@ -269,6 +270,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   Get.to(()=>HomeSlidable());
                 },
                 child: Text('slid able'),
+              ),
+
+              MaterialButton(
+                color: Colors.lightBlueAccent,
+                onPressed: (){
+                  Get.to(()=>VideosPlayers());
+                },
+                child: Text('VideosPlayers'),
               ),
             ],
           ),
