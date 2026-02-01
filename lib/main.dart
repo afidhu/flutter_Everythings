@@ -11,6 +11,8 @@ import 'bindings/allBindings.dart';
 import 'bottombars/login.dart';
 import 'check_connection/internent_controller.dart';
 import 'package:hive/hive.dart';
+
+import 'dio_interceptor/dio_interceptor.dart';
 Future<void> main()  async{
 
   WidgetsFlutterBinding.ensureInitialized();

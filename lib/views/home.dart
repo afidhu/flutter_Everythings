@@ -10,6 +10,7 @@ import '../bottombars/my_bottombar.dart';
 import '../charts_graphs/charts_list.dart';
 import '../cupertino_wedget/cupertino_list.dart';
 import '../data_api/widgets/home_data.dart';
+import '../dio_interceptor/dio_screen/dio_interceptors_screen.dart';
 import '../maps/map_screen.dart';
 import '../quill_editor/quil_text_editing.dart';
 import '../tutorials/tutoriaList.dart';
@@ -279,6 +280,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: Text('VideosPlayers'),
               ),
+
+              MaterialButton(
+                color: Colors.lightGreenAccent,
+                onPressed: (){
+                  Get.to(()=>DioInterceptorsScreen());
+                },
+                child: Text('interceptors'),
+              ),
+
             ],
           ),
         ),
