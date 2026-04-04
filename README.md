@@ -17,3 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 
 Even this reposihas pause for temporary 
 Now development activities are resume back
+
+  now development activities has pause ⏸️ 
